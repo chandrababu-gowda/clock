@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time</title>
+<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="time" id="hour"></div>
+        <div class="colon">:</div>
+        <div class="time" id="minute"></div>
+        <div class="colon">:</div>
+        <div class="time" id="second"></div>
+        <div class="time" id="amPm"></div>
+    </div>
+
+
+
+    <script>
+        setInterval(function(){
+            const vari = new Date();
+            var hours = vari.getHours();
+            var cond = null;
+            if (hours > 12){
+                hours = hours - 12;
+                cond = "PM"
+            }
+            else{
+                hours = hours;
+                cond = "AM"
+            }
+            document.getElementById("hour").innerHTML = hours.toLocaleString(undefined,{minimumIntegerDigits: 2});
+            document.getElementById("minute").innerHTML = vari.getMinutes().toLocaleString(undefined,{minimumIntegerDigits: 2});
+            document.getElementById("second").innerHTML = vari.getSeconds().toLocaleString(undefined,{minimumIntegerDigits: 2});
+            document.getElementById("amPm").innerHTML = cond;
+        },1000)
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+}
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+.colon{
+    font-size: 15rem;
+    color: white;
+}
+
+.time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 450px;
+    /* border: 2px solid white; */
+    border-radius: 20px;
+    padding: 20px;
+    margin: 30px;
+    font-size: 10rem;
+    background-color: rgb(15, 15, 15);
+    color: white;
+}
